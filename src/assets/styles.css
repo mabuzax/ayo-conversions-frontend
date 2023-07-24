@@ -1,0 +1,212 @@
+.card-list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+}
+
+.card {
+  box-sizing: border-box;
+  width: 23%;
+  margin: 10px;
+  padding: 10px;
+  border-radius: 4px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
+  background-color: #ffffff;
+  align-items: normal;
+  justify-content: normal;
+  margin-bottom: 10px;
+  font-family: Inter, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu,
+    Cantarell, 'Fira Sans', 'Droid Sans', 'Helvetica Neue', sans-serif;
+  font-size: 12px;
+}
+
+.card-header {
+  position: relative;
+  height: 30px;
+  border-radius: 4px 4px 0 0;
+  display: flex;
+  align-items: left;
+  justify-content: left;
+}
+
+.card-id {
+  font-size: 12px;
+  font-weight: bold;
+  color: #555555;
+}
+
+.dropdown {
+  margin-right: 10px;
+  padding: 5px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  background-color: #fff;
+  color: #333;
+  font-family: Inter, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu,
+    Cantarell, 'Fira Sans', 'Droid Sans', 'Helvetica Neue', sans-serif;
+  font-size: 12px;
+}
+
+.dropdown:focus {
+  outline: none;
+  border-color: #80bdff;
+  box-shadow: 0 0 0 2px rgba(0, 123, 255, 0.25);
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px;
+  font-family: Inter, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu,
+    Cantarell, 'Fira Sans', 'Droid Sans', 'Helvetica Neue', sans-serif;
+  font-size: 12px;
+}
+
+.title {
+  text-align: left;
+}
+
+.actions {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+
+
+.delete-checkbox {
+  appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  outline: none;
+  margin: 0;
+  padding: 0;
+  border: none;
+  cursor: pointer;
+  position: relative;
+}
+
+.delete-checkbox::before {
+  content: "";
+  display: inline-block;
+  width: 16px;
+  height: 16px;
+  border: 2px solid #999999;
+  border-radius: 4px;
+  background-color: white;
+  transition: border-color 0.3s ease-in-out;
+}
+
+.delete-checkbox:checked::before {
+  background-color: #ff0000;
+  border-color: #ff0000;
+}
+
+.delete-checkbox+label {
+  display: none;
+}
+
+
+.form-group {
+  display: flex;
+  align-items: center;
+  margin-top: 10px;
+}
+
+label {
+  width: 100px;
+}
+
+input,
+select {
+  flex-grow: 1;
+  padding: 8px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+button {
+  padding: 5px 10px;
+  border: 1px solid #bbbb;
+  border-radius: 5px;
+  cursor: pointer;
+  margin: 2px;
+  font-family: Inter, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu,
+    Cantarell, 'Fira Sans', 'Droid Sans', 'Helvetica Neue', sans-serif;
+  font-size: 12px;
+  transition: transform 0.2s;
+}
+
+button:hover {
+  background-color: #7c7c7c;
+  color: #fff;
+}
+
+button:active {
+  transform: scale(0.95);
+}
+
+.error-msg {
+  color: red;
+  display: block;
+}
+
+.input-errors {
+  text-align: right;
+  vertical-align: text-top;
+  margin-bottom: 0px;
+}
+
+.input-info {
+  text-align: center;
+  vertical-align: text-top;
+  font-style: italic;
+}
+
+.page-error-msg {
+  color: rgb(255, 255, 255);
+  background-color: rgb(255, 0, 0, 0.5);
+  text-align: center;
+  padding: 10px;
+  border-radius: 5px;
+  font-weight: 700;
+  transition: opacity 0.9s ease-in-out;
+}
+
+
+@media screen and (max-width: 600px) {
+  .card-list {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .card {
+    width: 80%;
+    margin: 10px 0;
+    color:#333
+  }
+
+  .header, .dropdown, .form-group, button {
+    font-size: 14px;
+  }
+
+  .card-id {
+    font-size: 14px;
+  }
+}
+
+@media screen and (min-width: 601px) and (max-width: 1200px) {
+  .card-list {
+    justify-content: space-around;
+  }
+
+  .card {
+    width: 45%;
+  }
+}
+
+@media screen and (min-width: 1201px) {
+  .card {
+    width: 23%;
+  }
+}
