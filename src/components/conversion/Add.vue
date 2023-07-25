@@ -41,7 +41,7 @@ export default {
     const createNewConfig = (conversion) => {      
 
       if (conversion.fromUnit && conversion.toUnit && conversion.convertFactor) {
-        axios.post('http://localhost:8080/conversion/new', conversion,{
+        axios.post('/conversion/new', conversion,{
                         headers: {
                             "Accept": "application/json, text/plain, */*",
                             "Content-Type": "application/json",

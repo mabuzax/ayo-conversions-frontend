@@ -60,7 +60,7 @@ export default {
         const editConversionData = ref({});
         
         const fetchData = () => {
-            axios.get('http://localhost:8080/conversion/show/all', {
+            axios.get('/conversion/show/all', {
                         headers: {
                             "Accept": "application/json, text/plain, */*",
                             "Content-Type": "application/json",
@@ -94,7 +94,7 @@ export default {
         const submitEdit = (conversion) => {
             conversion.convertFactor = editConversionData.value.convertFactor;
             conversion.addend = editConversionData.value.addend;
-            axios.put('http://localhost:8080/conversion/update', conversion,{
+            axios.put('/conversion/update', conversion,{
                         headers: {
                             "Accept": "application/json, text/plain, */*",
                             "Content-Type": "application/json",
@@ -118,7 +118,7 @@ export default {
         }
 
         const deleteConversion = (conversion) => {
-            axios.delete('http://localhost:8080/conversion/remove?fromUnit=' + conversion.fromUnit + "&toUnit=" + conversion.toUnit, {
+            axios.delete('/conversion/remove?fromUnit=' + conversion.fromUnit + "&toUnit=" + conversion.toUnit, {
                         headers: {
                             "Accept": "application/json, text/plain, */*",
                             "Content-Type": "application/json",
